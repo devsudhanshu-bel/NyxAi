@@ -10,3 +10,4 @@ Development Tools:
 - Clip Drop (image generation)
 - Clerk (dynamic user handling)
 - Vercel (deployment)
+- Postman (testing api's)
