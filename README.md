@@ -1,98 +1,161 @@
 # NyxAI
 
-NyxAI is a full-stack SaaS AI application that enables users to authenticate securely and access multiple AI-powered features through a modern web interface. The platform integrates generative AI APIs for response generation and image processing, built with a scalable backend architecture and deployed in a production-ready environment.
+NyxAI is a generative AI-powered SaaS platform that enables users to securely access and interact with AI-driven tools through a unified web interface. The platform combines authentication, scalable backend infrastructure, and third-party AI integrations into a production-ready application.
 
-The system is designed to simulate a real-world SaaS model with user authentication, API management, and cloud-based storage.
-
----
-
-## Technologies
-
-### Frontend
-- React.js
-- Tailwind CSS
-
-### Backend
-- Node.js
-- Express.js
-- REST APIs
-
-### Database
-- PostgreSQL (Neon Database)
-
-### Cloud & Services
-- Cloudinary (Image Storage)
-- Gemini API (Text Generation)
-- ClipDrop API (Image Generation)
-- Clerk (Authentication & User Management)
-- Vercel (Deployment)
-- Postman (API Testing)
+NyxAI demonstrates how generative AI services can evolve from standalone APIs into structured, deployable SaaS products.
 
 ---
 
-## Features
+## The Problem
 
-- Secure user authentication and session handling
-- AI-powered text generation using Gemini API
-- AI-powered image generation via ClipDrop
-- Cloud-based image storage using Cloudinary
-- Persistent data storage using PostgreSQL
-- RESTful API architecture
-- Production deployment on Vercel
-- Clean responsive UI with Tailwind CSS
-- Modular client-server separation
+Generative AI tools are powerful but fragmented. Most solutions exist as isolated APIs without structured authentication, persistent storage, or scalable backend architecture.
+
+Users and developers need:
+
+- Secure access to AI features  
+- Centralized user management  
+- Persistent cloud storage  
+- Clean and scalable system design  
+
+NyxAI addresses this gap.
 
 ---
 
-## System Architecture & Process
+## The Solution
 
-1. User registers or logs in via Clerk authentication.
-2. Authenticated session token is verified on the backend.
-3. User selects AI feature (text or image generation).
-4. Backend processes request and calls respective AI API.
-5. Generated output is returned to frontend.
-6. Images are stored in Cloudinary if required.
-7. User activity and data are stored in PostgreSQL.
+NyxAI integrates multiple AI services into a cohesive SaaS model with:
+
+- Secure authentication and session management  
+- AI-powered text generation  
+- AI-powered image generation  
+- Cloud-based media storage  
+- Persistent relational database  
+- Production-ready deployment  
+
+The system is structured to simulate real-world SaaS architecture and deployment practices.
+
+---
+
+## Core Features
+
+- Secure login and user management via Clerk  
+- Text generation using Gemini API  
+- Image generation using ClipDrop API  
+- Image storage using Cloudinary  
+- PostgreSQL (Neon) database integration  
+- Modular client-server architecture  
+- Production deployment on Vercel  
+
+---
+
+## System Workflow
+
+1. User authenticates using Clerk.
+2. Frontend sends authenticated request to backend.
+3. Backend validates session token.
+4. Backend routes request to selected AI service.
+5. AI API processes input and returns output.
+6. Images are stored in Cloudinary when applicable.
+7. User data and activity are stored in PostgreSQL.
 8. Response is rendered dynamically in the UI.
 
-The architecture follows a clear separation of concerns between client and server, ensuring scalability and maintainability.
+---
+
+## Tech Stack
+
+### Frontend
+- React.js  
+- Tailwind CSS  
+
+### Backend
+- Node.js  
+- Express.js  
+- REST APIs  
+
+### Database
+- PostgreSQL (Neon Database)  
+
+### Cloud & Integrations
+- Gemini API (Text Generation)  
+- ClipDrop API (Image Generation)  
+- Cloudinary (Image Storage)  
+- Clerk (Authentication & User Management)  
+- Vercel (Deployment)  
+- Postman (API Testing)  
 
 ---
 
 ## What I Learned
 
-- Implementing secure authentication flows in SaaS applications
-- Integrating third-party AI APIs into backend pipelines
-- Handling asynchronous API requests efficiently
-- Structuring scalable REST API architecture
-- Managing cloud storage workflows
-- Deploying full-stack applications in production
-- Optimizing frontend-backend communication
-
----
-
-## Overall Growth
-
-This project strengthened my understanding of building end-to-end AI-driven SaaS systems. It improved my backend structuring skills, API integration strategies, and deployment practices. I gained practical exposure to production-level architecture decisions and real-world system design thinking.
+- Designing SaaS-style authentication systems  
+- Structuring scalable REST API architecture  
+- Integrating third-party AI services into backend workflows  
+- Managing asynchronous API handling  
+- Implementing cloud-based storage pipelines  
+- Deploying full-stack applications to production environments  
+- Thinking in terms of product architecture rather than isolated features  
 
 ---
 
 ## Future Improvements
 
-- Implement role-based access control
-- Add usage-based subscription logic
-- Introduce rate limiting and API quotas
-- Improve caching strategies
-- Add analytics dashboard
-- Implement CI/CD pipelines
-- Enhance UI animations and performance optimization
+- Role-based access control  
+- Usage-based subscription logic  
+- API rate limiting and quotas  
+- Usage analytics dashboard  
+- CI/CD pipeline automation  
+- Performance optimization and caching  
 
 ---
 
 ## Running the Project Locally
 
-### Clone the repository
+### Clone Repository
 
 ```bash
 git clone https://github.com/devsudhanshu-bel/NyxAi.git
 cd NyxAi
+```
+
+---
+
+### Backend Setup
+
+```bash
+cd server
+npm install
+```
+
+Create a `.env` file inside the server directory and configure:
+
+```
+DATABASE_URL=
+CLERK_SECRET_KEY=
+GEMINI_API_KEY=
+CLIPDROP_API_KEY=
+CLOUDINARY_API_KEY=
+```
+
+Start backend server:
+
+```bash
+npm run dev
+```
+
+---
+
+### Frontend Setup
+
+```bash
+cd client
+npm install
+npm run dev
+```
+
+The application will run locally with both frontend and backend environments configured.
+
+---
+
+## Deployment
+
+NyxAI is deployed on Vercel with environment variables securely configured in production settings.
